@@ -42,8 +42,8 @@ int main(int argc, char * argv[]) {
 	image2.setX(300.0);
 	image2.setY(150.0);
 	image1.setVelocity(100, 100);
-	image2.setVelocity(0,100);
-	image2.load("duck.bmp", 500, 546);
+	image2.setVelocity(0,-100);
+	image2.load("duck.bmp", 150, 150);
 	image1.load("newBaseball.bmp", 100, 100);
 
 	// Write video frames into the pipe.
