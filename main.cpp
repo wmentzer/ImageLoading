@@ -1,5 +1,7 @@
 #include <iostream>
 #include "Image.h"
+#include "Rectangle.h"
+#include "Object.h"
 #include "Frame.h"
 #include <stdio.h>
 #include <fstream>
@@ -37,12 +39,17 @@ int main(int argc, char * argv[]) {
 		return 1;
 	}
 
+	Rectangle rec(10, 20);
 	Image image1;
 	Image image2;
+	rec.setX(0.0);
+	rec.setY(300.0);
 	image2.setX(300.0);
 	image2.setY(150.0);
+	rec.setVelocity(100, -100);
 	image1.setVelocity(100, 100);
 	image2.setVelocity(0,-100);
+	rec.setColor(0xFF, 0x00, 0x00);
 	image2.load("duck.bmp", 150, 150);
 	image1.load("newBaseball.bmp", 100, 100);
 
@@ -51,8 +58,10 @@ int main(int argc, char * argv[]) {
 	for (int i = 0; i < num_frames; ++i) {
 		double dt = 1.0 / frames_per_second;
 		frame.clear();
+		rec.draw();
 		image1.draw();
 		image2.draw();
+		rec.update(dt);
 		image1.update(dt);
 		image2.update(dt);
 	

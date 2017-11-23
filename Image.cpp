@@ -41,6 +41,14 @@ void Image::setVelocity(double dx, double dy) {
 	this->dy = dy;
 }
 
+void Image::setX(double newX) {
+	xPos = newX;
+}
+
+void Image::setY(double newY) {
+	yPos = newY;
+}
+
 void Image::update(double dt) {
 	xPos = xPos + dt * dx;
 	yPos = yPos + dt * dy;

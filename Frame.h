@@ -12,7 +12,7 @@ typedef unsigned char byte;
 class Frame {
 public:
 	Frame(int w, int h);
-	~Frame() { delete pixels; }
+	~Frame() { delete [] pixels; }
 	void clear();
 	void setPixel(int x, int y, byte r, byte g, byte b);
 	bool outside_frame(int x, int y);

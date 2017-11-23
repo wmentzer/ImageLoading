@@ -1,1 +1,1 @@
-c++ main.cpp Frame.cpp Image.cpp && ./a.out && open output.mp4
+c++ main.cpp Frame.cpp Image.cpp Rectangle.cpp && ./a.out && open output.mp4
